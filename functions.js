@@ -36,9 +36,37 @@ function order (clients, property) {
 // Total Function
 function total (clients) {  
     const totalBalance = clients.reduce((accumulator, client) => {
-        
-    })
+        return accumulator + client.balance;
+    }, 0)
+    
+    return totalBalance
 }
+
+// Info Function **
+const info = (index) => {
+    // Searches through the clients array and finds 
+    const desiredClient = clients.find((client, arrayIndex) => arrayIndex === index)
+    return desiredClient
+}
+
+// Search function
+const search = (query) => {
+    // Converts the query to lowercase for non case sensitive comparison
+    const lowerCaseQuery = query.toLowerCase()
+
+    // Filters and returns an array of clients whose names contain the provided search query
+    const matchingClients = clients.filter((client) => {
+        // Converts the name of the inputted client to lowercase for non case sensitive search
+        const lowerCaseName = client.name.toLowerCase()
+
+        // .includes() checks if the clients name is included in the search query
+        return lowerCaseName.includes(lowerCaseQuery)
+    })
+    return matchingClients
+}
+
+
+
 
 
 
