@@ -6,7 +6,7 @@ function list (clients) {
         return `
         <li class="list-group-item d-flex justify-content-between" data-index="${client.index}">
         ${client.name}
-        <strong>${client.balance}</strong>
+        <strong>$${client.balance}</strong>
         </li>
         `
     })
