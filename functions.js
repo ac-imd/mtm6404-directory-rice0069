@@ -42,7 +42,7 @@ function total (clients) {
     return totalBalance
 }
 
-// Info Function **
+// Info Function ** (Not sure how to test if this function is actually working or not. Currently no errors in console so I guess it works?)
 const info = (index) => {
     // Searches through the clients array and finds 
     const desiredClient = clients.find((client, arrayIndex) => arrayIndex === index)
